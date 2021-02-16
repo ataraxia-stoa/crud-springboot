@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>雇員管理システム</title>
+</head>
+<body>
+
+<div align="center">
+	<h1>雇員リスト</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>雇員ファーストネーム</th>
+				<th>雇員ラストネーム</th>
+				<th>雇員メール</th>
+			</tr>
+		</thead>
+		<tbody>
+                <tr th:each="employee : ${listEmployees}">
+                    <td th:text="${employee.firstName}"></td>
+                    <td th:text="${employee.lastName}"></td>
+                    <td th:text="${employee.email}"></td>
+                    
+                </tr>
+            </tbody>
+	</table>
+</div>
+
+</body>
+</html>
